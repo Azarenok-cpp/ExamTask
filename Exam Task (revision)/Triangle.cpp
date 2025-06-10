@@ -8,7 +8,7 @@ double Triangle::getArea(){
 	return sqrt(p * (p - sideAB) * (p - sideAC) * (p - sideBC));
 }
 double Triangle::getDistanceToOrigin(){
-	return min(A.getDistanceToOrigin(), B.getDistanceToOrigin(), C.getDistanceToOrigin());
+	return min(min(A.getDistanceToOrigin(), B.getDistanceToOrigin()), C.getDistanceToOrigin());
 }
 
 string Triangle::getType() { return "Triangle"; }

@@ -11,7 +11,7 @@ double Rectangle::getDistanceToOrigin(){
 	double distanceVertex3 = Point(vertex.getX() + width, vertex.getY() + height).getDistanceToOrigin();
 	double distanceVertex4 = Point(vertex.getX() + width, vertex.getY()).getDistanceToOrigin();
 
-	return min(min(distanceVertex1, distanceVertex2, distanceVertex3), distanceVertex4);
+	return min(min(distanceVertex1, distanceVertex2), min(distanceVertex3, distanceVertex4));
 }			   
 string Rectangle::getType() { return "Rectange"; }
 string Rectangle::toString(){

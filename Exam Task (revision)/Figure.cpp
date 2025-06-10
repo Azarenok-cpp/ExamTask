@@ -1,8 +1,7 @@
-#include "Figure.h"
-
-//double Figure::getArea(){}
-//double Figure::getPerimeter(){}
-//double Figure::getDistanceToOrigin(){}
-//void Figure::setArea(){}
-//void Figure::setPerimeter(){}
-//void Figure::setDistanceToOrigin() {}
+//#include "Figure.h"
+//
+//double perimeter() {}
+//double area() {}
+//double distanceToOrigin() {}
+//void printInfo(){}
+//std::string type(){}
