@@ -1,5 +1,6 @@
 #pragma once
 #include "math.h"
+#define _USE_MATH_DEFINES
 #include "string"
 using namespace std;
 class Figure
