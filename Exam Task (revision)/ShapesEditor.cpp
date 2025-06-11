@@ -4,6 +4,7 @@ string ShapesEditor::toStringAllFigures(Figure** figures, int size) {
 	if (!figures || size <= 0) {
 		return "Error!";
 	}
+
 	string s = "";
 	for (int i = 0; i < size; i++)
 	{
@@ -88,7 +89,7 @@ double ShapesEditor::calculateSumPerimeter(Figure** figures, int size){
 
 	double sum = 0;
 
-	for (int i = 1; i < size; i++)
+	for (int i = 0; i < size; i++)
 	{
 		sum += figures[i]->getPerimeter();
 	}
@@ -102,7 +103,7 @@ double ShapesEditor::calculateSumArea(Figure** figures, int size){
 
 	double sum = 0;
 
-	for (int i = 1; i < size; i++)
+	for (int i = 0; i < size; i++)
 	{
 		sum += figures[i]->getArea();
 	}

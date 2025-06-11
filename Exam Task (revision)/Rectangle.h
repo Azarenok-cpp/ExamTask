@@ -9,11 +9,10 @@ private:
 	Point vertex; //left bottom vertex
 	double width, height;
 
-
 public:
 	Rectangle(Point vertex, double width, double height) 
-		: vertex(vertex), width(width > 0 ? width : 0), 
-		height(height > 0 ? height : 0) {}
+		: vertex(vertex), width(abs(width)), 
+		height(abs(height)) {}
 
 	double getPerimeter() override;
 	double getArea() override;

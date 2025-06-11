@@ -1,6 +1,7 @@
 #pragma once
 #include "Figure.h"
 #include "Point.h"
+
 class Line : public Figure
 {
 private:
@@ -18,6 +19,5 @@ public:
 
 	string getType() override;
 	string toString() override;
-
 };
 

@@ -2,6 +2,7 @@
 #include "Figure.h"
 #include "Point.h"
 #include "Line.h"
+
 class Triangle : public Figure
 {
 private:

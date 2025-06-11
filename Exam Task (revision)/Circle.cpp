@@ -1,6 +1,5 @@
 #include "Circle.h"
 
-
 Point Circle::getCenter() { return center; }
 double Circle::getRadius() { return radius; }
 

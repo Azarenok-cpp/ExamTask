@@ -1,5 +1,6 @@
 #pragma once
 #include "Figure.h"
+
 class ShapesEditor
 {
 public:
@@ -11,6 +12,5 @@ public:
 	double calculateSumPerimeter(Figure** figures, int size);
 	double calculateSumArea(Figure** figures, int size);
 	double calculateAvgArea(Figure** figures, int size);
-
 };
 
