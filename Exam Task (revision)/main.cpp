@@ -1,11 +1,11 @@
 #include <iostream>
-#include <vector>
 
 #include "Point.h"
 #include "Rectangle.h"
 #include "Triangle.h"
 #include "Circle.h"
 #include "Line.h"
+
 #include "ShapesEditor.h"
 
 int main() {
@@ -121,7 +121,39 @@ int main() {
 	cout << "Sum perimeter: " << sumPerimeter << "\n\n";
 	cout << "Sum area: " << sumArea << "\n\n";
 	cout << "Average area: " << avgArea << "\n\n";*/
-	
+	/*size = 5;
+	Figure** nullptrs = new Figure * [size] {nullptr, nullptr, nullptr, nullptr, nullptr};
+	mostFarFigure = editor.findMostFarFromOriginFigure(nullptrs, size);
+	closestFigure = editor.findClosestToOriginFigure(nullptrs, size);
+	biggestPerimeterFigure
+		= editor.findBiggestPerimeterFigure(nullptrs, size);
+	biggestAreaFigure = editor.findBiggestAreaFigure(nullptrs, size);
+	sumPerimeter = editor.calculateSumPerimeter(nullptrs, size);
+	sumArea = editor.calculateSumArea(nullptrs, size);
+	avgArea = editor.calculateAvgArea(nullptrs, size);
 
+	cout << "\033[31m Array with nullptrs in it TEST\033[0m \n\n";
+	cout << "ToString:" << editor.toStringAllFigures(nullptr, size) << "\n\n";
+	cout << "The most far from origin: "
+		<< (mostFarFigure ? mostFarFigure->getType() : "Fool-proof")
+		<< "\n\n";
+	cout << "The closest to origin: "
+		<< (closestFigure ? closestFigure->getType() : "Fool-proof")
+		<< "\n\n";
+	cout << "Biggest perimeter figure: "
+		<< (biggestPerimeterFigure ? biggestPerimeterFigure->getType()
+			: "Fool-proof") << "\n\n";
+	cout << "Biggest area figure: "
+		<< (biggestAreaFigure ? biggestAreaFigure->getType() : "Fool-proof")
+		<< "\n\n";
+	cout << "Sum perimeter: " << sumPerimeter << "\n\n";
+	cout << "Sum area: " << sumArea << "\n\n";
+	cout << "Average area: " << avgArea << "\n\n";*/
+
+	for (int i = 0; i < size; i++)
+	{
+		delete figures[i];
+	}
+	delete[] figures;
 	return 0;
 }

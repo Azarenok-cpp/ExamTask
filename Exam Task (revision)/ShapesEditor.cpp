@@ -10,6 +10,7 @@ string ShapesEditor::toStringAllFigures(Figure** figures, int size) {
 	{
 		s += to_string(i + 1) + ") ";
 		s += figures[i]->toString() + "\n";
+
 	}
 	return s;
 
@@ -23,7 +24,7 @@ Figure* ShapesEditor::findClosestToOriginFigure(Figure** figures, int size){
 
 	for (int i = 1; i < size; i++)
 	{
-		if (figures[i]->getDistanceToOrigin() < closest->getDistanceToOrigin()) {
+		if (figures[i] && figures[i]->getDistanceToOrigin() < closest->getDistanceToOrigin()) {
 			closest = figures[i];
 		}
 	}
@@ -40,7 +41,7 @@ Figure* ShapesEditor::findMostFarFromOriginFigure(Figure** figures, int size) {
 
 	for (int i = 1; i < size; i++)
 	{
-		if (figures[i]->getDistanceToOrigin() > mostFar->getDistanceToOrigin()) {
+		if (figures[i] && figures[i]->getDistanceToOrigin() > mostFar->getDistanceToOrigin()) {
 			mostFar = figures[i];
 		}
 	}
@@ -57,7 +58,7 @@ Figure* ShapesEditor::findBiggestAreaFigure(Figure** figures, int size){
 
 	for (int i = 1; i < size; i++)
 	{
-		if (figures[i]->getArea() > biggest->getDistanceToOrigin()) {
+		if (figures[i] && figures[i]->getArea() > biggest->getDistanceToOrigin()) {
 			biggest = figures[i];
 		}
 	}
@@ -74,7 +75,7 @@ Figure* ShapesEditor::findBiggestPerimeterFigure(Figure** figures, int size){
 
 	for (int i = 1; i < size; i++)
 	{
-		if (figures[i]->getPerimeter() > biggest->getPerimeter()) {
+		if (figures[i] && figures[i]->getPerimeter() > biggest->getPerimeter()) {
 			biggest = figures[i];
 		}
 	}
@@ -91,7 +92,8 @@ double ShapesEditor::calculateSumPerimeter(Figure** figures, int size){
 
 	for (int i = 0; i < size; i++)
 	{
-		sum += figures[i]->getPerimeter();
+		sum += figures[i] ? figures[i]->getPerimeter() : 0;
+
 	}
 
 	return sum;
@@ -105,7 +107,7 @@ double ShapesEditor::calculateSumArea(Figure** figures, int size){
 
 	for (int i = 0; i < size; i++)
 	{
-		sum += figures[i]->getArea();
+		sum += figures[i] ? figures[i]->getArea() : 0;
 	}
 
 	return sum;
