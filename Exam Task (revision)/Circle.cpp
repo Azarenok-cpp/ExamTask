@@ -13,7 +13,7 @@ double Circle::getArea() {
 }
 
 double Circle::getDistanceToOrigin() {
-	return center.getDistanceToOrigin() - radius;
+	return abs(center.getDistanceToOrigin() - radius);
 }
 
 string Circle::getType() { return "Circle"; }

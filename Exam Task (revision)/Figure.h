@@ -6,7 +6,6 @@ using namespace std;
 class Figure
 {
 public:
-    //virtual ~Shape() = default;
     virtual double getPerimeter() = 0;
     virtual double getArea() = 0;
     virtual double getDistanceToOrigin() = 0;
